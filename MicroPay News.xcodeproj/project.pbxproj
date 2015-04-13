@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA71ADC822700D6946B /* AppDelegate.swift */; };
+		FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA91ADC822700D6946B /* ViewController.swift */; };
+		FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAB1ADC822700D6946B /* Main.storyboard */; };
+		FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAE1ADC822700D6946B /* Images.xcassets */; };
+		FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB043FB01ADC822700D6946B /* LaunchScreen.xib */; };
+		FB043FBE1ADC822700D6946B /* MicroPay_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB043FB81ADC822700D6946B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB043F9A1ADC822700D6946B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB043FA11ADC822700D6946B;
+			remoteInfo = "MicroPay News";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB043FA21ADC822700D6946B /* MicroPay News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MicroPay News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB043FA61ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB043FA71ADC822700D6946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB043FA91ADC822700D6946B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB043FAC1ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB043FAE1ADC822700D6946B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB043FB11ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FB043FB71ADC822700D6946B /* MicroPay NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MicroPay NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB043FBC1ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroPay_NewsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB043F9F1ADC822700D6946B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB043FB41ADC822700D6946B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB043F991ADC822700D6946B = {
+			isa = PBXGroup;
+			children = (
+				FB043FA41ADC822700D6946B /* MicroPay News */,
+				FB043FBA1ADC822700D6946B /* MicroPay NewsTests */,
+				FB043FA31ADC822700D6946B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB043FA31ADC822700D6946B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB043FA21ADC822700D6946B /* MicroPay News.app */,
+				FB043FB71ADC822700D6946B /* MicroPay NewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB043FA41ADC822700D6946B /* MicroPay News */ = {
+			isa = PBXGroup;
+			children = (
+				FB043FA71ADC822700D6946B /* AppDelegate.swift */,
+				FB043FA91ADC822700D6946B /* ViewController.swift */,
+				FB043FAB1ADC822700D6946B /* Main.storyboard */,
+				FB043FAE1ADC822700D6946B /* Images.xcassets */,
+				FB043FB01ADC822700D6946B /* LaunchScreen.xib */,
+				FB043FA51ADC822700D6946B /* Supporting Files */,
+			);
+			path = "MicroPay News";
+			sourceTree = "<group>";
+		};
+		FB043FA51ADC822700D6946B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB043FA61ADC822700D6946B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB043FBA1ADC822700D6946B /* MicroPay NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */,
+				FB043FBB1ADC822700D6946B /* Supporting Files */,
+			);
+			path = "MicroPay NewsTests";
+			sourceTree = "<group>";
+		};
+		FB043FBB1ADC822700D6946B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB043FBC1ADC822700D6946B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB043FA11ADC822700D6946B /* MicroPay News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB043FC11ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay News" */;
+			buildPhases = (
+				FB043F9E1ADC822700D6946B /* Sources */,
+				FB043F9F1ADC822700D6946B /* Frameworks */,
+				FB043FA01ADC822700D6946B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MicroPay News";
+			productName = "MicroPay News";
+			productReference = FB043FA21ADC822700D6946B /* MicroPay News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB043FB61ADC822700D6946B /* MicroPay NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB043FC41ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay NewsTests" */;
+			buildPhases = (
+				FB043FB31ADC822700D6946B /* Sources */,
+				FB043FB41ADC822700D6946B /* Frameworks */,
+				FB043FB51ADC822700D6946B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB043FB91ADC822700D6946B /* PBXTargetDependency */,
+			);
+			name = "MicroPay NewsTests";
+			productName = "MicroPay NewsTests";
+			productReference = FB043FB71ADC822700D6946B /* MicroPay NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB043F9A1ADC822700D6946B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Group 1";
+				TargetAttributes = {
+					FB043FA11ADC822700D6946B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FB043FB61ADC822700D6946B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FB043FA11ADC822700D6946B;
+					};
+				};
+			};
+			buildConfigurationList = FB043F9D1ADC822700D6946B /* Build configuration list for PBXProject "MicroPay News" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB043F991ADC822700D6946B;
+			productRefGroup = FB043FA31ADC822700D6946B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB043FA11ADC822700D6946B /* MicroPay News */,
+				FB043FB61ADC822700D6946B /* MicroPay NewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB043FA01ADC822700D6946B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */,
+				FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */,
+				FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB043FB51ADC822700D6946B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB043F9E1ADC822700D6946B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */,
+				FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB043FB31ADC822700D6946B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB043FBE1ADC822700D6946B /* MicroPay_NewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB043FB91ADC822700D6946B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB043FA11ADC822700D6946B /* MicroPay News */;
+			targetProxy = FB043FB81ADC822700D6946B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB043FAB1ADC822700D6946B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB043FAC1ADC822700D6946B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB043FB01ADC822700D6946B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB043FB11ADC822700D6946B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB043FBF1ADC822700D6946B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB043FC01ADC822700D6946B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB043FC21ADC822700D6946B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MicroPay News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB043FC31ADC822700D6946B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MicroPay News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB043FC51ADC822700D6946B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MicroPay NewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MicroPay News.app/MicroPay News";
+			};
+			name = Debug;
+		};
+		FB043FC61ADC822700D6946B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MicroPay NewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MicroPay News.app/MicroPay News";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB043F9D1ADC822700D6946B /* Build configuration list for PBXProject "MicroPay News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB043FBF1ADC822700D6946B /* Debug */,
+				FB043FC01ADC822700D6946B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB043FC11ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB043FC21ADC822700D6946B /* Debug */,
+				FB043FC31ADC822700D6946B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB043FC41ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB043FC51ADC822700D6946B /* Debug */,
+				FB043FC61ADC822700D6946B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB043F9A1ADC822700D6946B /* Project object */;
+}
