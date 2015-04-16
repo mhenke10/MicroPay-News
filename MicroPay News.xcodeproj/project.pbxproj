@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA71ADC822700D6946B /* AppDelegate.swift */; };
-		FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA91ADC822700D6946B /* ViewController.swift */; };
-		FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAB1ADC822700D6946B /* Main.storyboard */; };
 		FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAE1ADC822700D6946B /* Images.xcassets */; };
 		FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB043FB01ADC822700D6946B /* LaunchScreen.xib */; };
 		FB043FBE1ADC822700D6946B /* MicroPay_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */; };
+		FB5DC5071ADD8CE7000E16B6 /* PurchasedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */; };
+		FBF25D481ADF0E5400E23E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF25D471ADF0E5400E23E56 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		FB043FA21ADC822700D6946B /* MicroPay News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MicroPay News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FA61ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FA71ADC822700D6946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB043FA91ADC822700D6946B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB043FAC1ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB043FAE1ADC822700D6946B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB043FB11ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB043FB71ADC822700D6946B /* MicroPay NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MicroPay NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FBC1ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroPay_NewsTests.swift; sourceTree = "<group>"; };
+		FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedPageViewController.swift; sourceTree = "<group>"; };
+		FBF25D471ADF0E5400E23E56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,9 @@
 		FB043FA41ADC822700D6946B /* MicroPay News */ = {
 			isa = PBXGroup;
 			children = (
+				FBF25D471ADF0E5400E23E56 /* Main.storyboard */,
 				FB043FA71ADC822700D6946B /* AppDelegate.swift */,
-				FB043FA91ADC822700D6946B /* ViewController.swift */,
-				FB043FAB1ADC822700D6946B /* Main.storyboard */,
+				FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */,
 				FB043FAE1ADC822700D6946B /* Images.xcassets */,
 				FB043FB01ADC822700D6946B /* LaunchScreen.xib */,
 				FB043FA51ADC822700D6946B /* Supporting Files */,
@@ -192,7 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */,
+				FBF25D481ADF0E5400E23E56 /* Main.storyboard in Resources */,
 				FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */,
 				FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */,
 			);
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */,
 				FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */,
+				FB5DC5071ADD8CE7000E16B6 /* PurchasedPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +236,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB043FAB1ADC822700D6946B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB043FAC1ADC822700D6946B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB043FB01ADC822700D6946B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -405,6 +397,7 @@
 				FB043FC31ADC822700D6946B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB043FC41ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +406,7 @@
 				FB043FC61ADC822700D6946B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
