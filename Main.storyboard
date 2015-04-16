@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pR-Zv-hbc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="42y-JS-eH2">
+            <objects>
+                <navigationController id="5pR-Zv-hbc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRu-M3-p49">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yo0-xz-ByH" kind="relationship" relationship="rootViewController" id="60r-kp-qeR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btH-8r-INd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="1069"/>
+        </scene>
+        <!--Purchased Page View Controller-->
+        <scene sceneID="Awi-1n-D9u">
+            <objects>
+                <viewController id="yo0-xz-ByH" customClass="PurchasedPageViewController" customModule="MicroPay_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zPK-XM-8KN"/>
+                        <viewControllerLayoutGuide type="bottom" id="uaA-bi-W7X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4H-ud-7le">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-4q-tez">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="hZM-8v-617"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-HO-gLQ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="RTo-ho-M06" detailTextLabel="iys-Ow-g86" style="IBUITableViewCellStyleSubtitle" id="Gzt-pA-AKu">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gzt-pA-AKu" id="XF2-xC-DBP">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Article" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RTo-ho-M06">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Purchased Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iys-Ow-g86">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9b1-xk-daT">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9b1-xk-daT" id="mvi-nj-W4z">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nwt-HO-gLQ" firstAttribute="top" secondItem="zPK-XM-8KN" secondAttribute="bottom" id="LqY-nW-Dcb"/>
+                            <constraint firstItem="6Fe-4q-tez" firstAttribute="top" secondItem="nwt-HO-gLQ" secondAttribute="bottom" id="Qay-99-F3j"/>
+                            <constraint firstItem="6Fe-4q-tez" firstAttribute="leading" secondItem="b4H-ud-7le" secondAttribute="leading" id="RSX-jR-2Gf"/>
+                            <constraint firstAttribute="trailing" secondItem="nwt-HO-gLQ" secondAttribute="trailing" id="WFr-Er-mb3"/>
+                            <constraint firstItem="nwt-HO-gLQ" firstAttribute="leading" secondItem="b4H-ud-7le" secondAttribute="leading" id="avk-X3-tXp"/>
+                            <constraint firstAttribute="trailing" secondItem="6Fe-4q-tez" secondAttribute="trailing" id="h3D-3G-zl2"/>
+                            <constraint firstAttribute="bottom" secondItem="6Fe-4q-tez" secondAttribute="bottom" id="hUt-jh-XxK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UTf-1q-S5R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bn-8Y-bcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="1081"/>
+        </scene>
+    </scenes>
+</document>
