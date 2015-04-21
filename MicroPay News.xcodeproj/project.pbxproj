@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3853E4B1AE6C4490041FAD6 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3853E4A1AE6C4490041FAD6 /* StoreViewController.swift */; };
 		FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA71ADC822700D6946B /* AppDelegate.swift */; };
 		FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAE1ADC822700D6946B /* Images.xcassets */; };
 		FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB043FB01ADC822700D6946B /* LaunchScreen.xib */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3853E4A1AE6C4490041FAD6 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		FB043FA21ADC822700D6946B /* MicroPay News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MicroPay News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FA61ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FA71ADC822700D6946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				FB043FAE1ADC822700D6946B /* Images.xcassets */,
 				FB043FB01ADC822700D6946B /* LaunchScreen.xib */,
 				FB043FA51ADC822700D6946B /* Supporting Files */,
+				A3853E4A1AE6C4490041FAD6 /* StoreViewController.swift */,
 			);
 			path = "MicroPay News";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */,
 				FB5DC5071ADD8CE7000E16B6 /* PurchasedPageViewController.swift in Sources */,
+				A3853E4B1AE6C4490041FAD6 /* StoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

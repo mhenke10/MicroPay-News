@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pR-Zv-hbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pR-Zv-hbc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -13,12 +13,75 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yo0-xz-ByH" kind="relationship" relationship="rootViewController" id="60r-kp-qeR"/>
+                        <segue destination="Wqe-1R-ApY" kind="relationship" relationship="rootViewController" id="aSB-uL-h5V"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btH-8r-INd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="1069"/>
+            <point key="canvasLocation" x="22.5" y="773"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="oE5-jy-Tc2">
+            <objects>
+                <viewController id="Wqe-1R-ApY" customClass="StoreViewController" customModule="MicroPay_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VnM-Ho-QU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fjI-vZ-Wxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iuo-ru-Mxw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Welcome to the MicroPay News Store. Purchase bundles of tokens to unlock articles. One token unlocks one article." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-rB-A6V">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bqU-rB-A6V" secondAttribute="trailing" id="2wT-Gv-YIX"/>
+                            <constraint firstAttribute="centerX" secondItem="bqU-rB-A6V" secondAttribute="centerX" id="BtI-r5-eFg"/>
+                            <constraint firstItem="bqU-rB-A6V" firstAttribute="top" secondItem="VnM-Ho-QU6" secondAttribute="bottom" id="PGb-8F-6FQ">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="bqU-rB-A6V" secondAttribute="bottom" constant="-64" id="QM4-fT-6aK"/>
+                            <constraint firstItem="bqU-rB-A6V" firstAttribute="leading" secondItem="Iuo-ru-Mxw" secondAttribute="leading" id="oKg-lh-UoC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bqU-rB-A6V"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2wT-Gv-YIX"/>
+                                <exclude reference="BtI-r5-eFg"/>
+                                <exclude reference="PGb-8F-6FQ"/>
+                                <exclude reference="QM4-fT-6aK"/>
+                                <exclude reference="oKg-lh-UoC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bqU-rB-A6V"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2wT-Gv-YIX"/>
+                                <include reference="BtI-r5-eFg"/>
+                                <include reference="PGb-8F-6FQ"/>
+                                <include reference="QM4-fT-6aK"/>
+                                <include reference="oKg-lh-UoC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="yAi-n9-ihQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoH-lo-6SB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="1482"/>
         </scene>
         <!--Purchased Page View Controller-->
         <scene sceneID="Awi-1n-D9u">
@@ -86,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bn-8Y-bcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="1081"/>
+            <point key="canvasLocation" x="1173" y="773"/>
         </scene>
     </scenes>
 </document>
