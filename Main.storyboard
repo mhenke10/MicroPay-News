@@ -32,48 +32,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Welcome to the MicroPay News Store. Purchase bundles of tokens to unlock articles. One token unlocks one article." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-rB-A6V">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="D6u-Yu-gDE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
-                                </variation>
-                            </textView>
+                                <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Welcome to the MicroPay News Token Store. Purchase bundles to unlock articles. One token unlocks one article." selectable="NO" id="ew3-et-qvG">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UQg-8A-RwW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UQg-8A-RwW" id="iEk-lZ-YfR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bqU-rB-A6V" secondAttribute="trailing" id="2wT-Gv-YIX"/>
-                            <constraint firstAttribute="centerX" secondItem="bqU-rB-A6V" secondAttribute="centerX" id="BtI-r5-eFg"/>
-                            <constraint firstItem="bqU-rB-A6V" firstAttribute="top" secondItem="VnM-Ho-QU6" secondAttribute="bottom" id="PGb-8F-6FQ">
+                            <constraint firstItem="D6u-Yu-gDE" firstAttribute="top" secondItem="Iuo-ru-Mxw" secondAttribute="top" constant="31" id="Hda-nv-J0b">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstAttribute="bottom" secondItem="bqU-rB-A6V" secondAttribute="bottom" constant="-64" id="QM4-fT-6aK"/>
-                            <constraint firstItem="bqU-rB-A6V" firstAttribute="leading" secondItem="Iuo-ru-Mxw" secondAttribute="leading" id="oKg-lh-UoC"/>
+                            <constraint firstAttribute="bottom" secondItem="D6u-Yu-gDE" secondAttribute="bottom" constant="-29" id="I75-ht-o6O">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="D6u-Yu-gDE" secondAttribute="trailing" constant="62" id="iea-1k-ONr">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="D6u-Yu-gDE" firstAttribute="leading" secondItem="Iuo-ru-Mxw" secondAttribute="leading" constant="-62" id="lQQ-eJ-dAC">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="bqU-rB-A6V"/>
+                                <exclude reference="D6u-Yu-gDE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2wT-Gv-YIX"/>
-                                <exclude reference="BtI-r5-eFg"/>
-                                <exclude reference="PGb-8F-6FQ"/>
-                                <exclude reference="QM4-fT-6aK"/>
-                                <exclude reference="oKg-lh-UoC"/>
+                                <exclude reference="Hda-nv-J0b"/>
+                                <exclude reference="I75-ht-o6O"/>
+                                <exclude reference="iea-1k-ONr"/>
+                                <exclude reference="lQQ-eJ-dAC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="bqU-rB-A6V"/>
+                                <include reference="D6u-Yu-gDE"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2wT-Gv-YIX"/>
-                                <include reference="BtI-r5-eFg"/>
-                                <include reference="PGb-8F-6FQ"/>
-                                <include reference="QM4-fT-6aK"/>
-                                <include reference="oKg-lh-UoC"/>
+                                <include reference="Hda-nv-J0b"/>
+                                <include reference="I75-ht-o6O"/>
+                                <include reference="iea-1k-ONr"/>
+                                <include reference="lQQ-eJ-dAC"/>
                             </mask>
                         </variation>
                     </view>
@@ -101,7 +115,7 @@
                                     <barButtonItem title="Item" id="hZM-8v-617"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-HO-gLQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-HO-gLQ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
