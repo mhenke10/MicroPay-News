@@ -10,17 +10,39 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tokenOptions: [String] = ["10 Tokens", "30 Tokens", "50 Tokens", "Monthly Subscription"]
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         var navigationBarAppearace = UINavigationBar.appearance()
         self.title = "Store"
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int)-> Int {
+        
+        return self.tokenOptions.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.tokenOptions[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!){
+        
+        println("Row \(indexPath.row) selected.")
+        
+    }
+
 }
