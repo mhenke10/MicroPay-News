@@ -10,7 +10,7 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     var tokenOptions: [String] = ["10 Tokens", "30 Tokens", "50 Tokens", "Monthly Subscription"]
     
