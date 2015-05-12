@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA71ADC822700D6946B /* AppDelegate.swift */; };
-		FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA91ADC822700D6946B /* ViewController.swift */; };
-		FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAB1ADC822700D6946B /* Main.storyboard */; };
 		FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAE1ADC822700D6946B /* Images.xcassets */; };
 		FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB043FB01ADC822700D6946B /* LaunchScreen.xib */; };
 		FB043FBE1ADC822700D6946B /* MicroPay_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */; };
+		FB30C9601AFFB470003E353F /* NewsStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30C95F1AFFB470003E353F /* NewsStories.swift */; };
+		FB49180C1AE6C6E000E0CF6E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49180B1AE6C6E000E0CF6E /* HomePage.swift */; };
+		FB4918121AE6CB2200E0CF6E /* dollar-symbol1 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */; };
+		FB52EB601AFFC3AD007598D6 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */; };
+		FB52EB761B011AD6007598D6 /* MissouriNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB751B011AD6007598D6 /* MissouriNews.swift */; };
+		FB52EB781B011AE2007598D6 /* ColumbiaNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB771B011AE2007598D6 /* ColumbiaNews.swift */; };
+		FB52EB7A1B011B07007598D6 /* WorldNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB791B011B07007598D6 /* WorldNews.swift */; };
+		FB52EB7C1B011B12007598D6 /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB7B1B011B12007598D6 /* Sports.swift */; };
+		FB52EB7E1B011B1A007598D6 /* Economy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB7D1B011B1A007598D6 /* Economy.swift */; };
+		FB52EB821B012342007598D6 /* home160.png in Resources */ = {isa = PBXBuildFile; fileRef = FB52EB811B012342007598D6 /* home160.png */; };
+		FB5DC5071ADD8CE7000E16B6 /* PurchasedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */; };
+		FB5F99641AE731DC00A4E2B8 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F99631AE731DC00A4E2B8 /* NewsArticle.swift */; };
+		FBD8F3121AFC1EE700F08BA1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD8F3111AFC1EE700F08BA1 /* StoreViewController.swift */; };
+		FBF25D481ADF0E5400E23E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF25D471ADF0E5400E23E56 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +41,25 @@
 		FB043FA21ADC822700D6946B /* MicroPay News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MicroPay News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FA61ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FA71ADC822700D6946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB043FA91ADC822700D6946B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB043FAC1ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB043FAE1ADC822700D6946B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB043FB11ADC822700D6946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB043FB71ADC822700D6946B /* MicroPay NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MicroPay NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FBC1ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FBD1ADC822700D6946B /* MicroPay_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroPay_NewsTests.swift; sourceTree = "<group>"; };
+		FB30C95F1AFFB470003E353F /* NewsStories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsStories.swift; sourceTree = "<group>"; };
+		FB49180B1AE6C6E000E0CF6E /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar-symbol1 (3).png"; sourceTree = "<group>"; };
+		FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		FB52EB751B011AD6007598D6 /* MissouriNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissouriNews.swift; sourceTree = "<group>"; };
+		FB52EB771B011AE2007598D6 /* ColumbiaNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumbiaNews.swift; sourceTree = "<group>"; };
+		FB52EB791B011B07007598D6 /* WorldNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldNews.swift; sourceTree = "<group>"; };
+		FB52EB7B1B011B12007598D6 /* Sports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sports.swift; sourceTree = "<group>"; };
+		FB52EB7D1B011B1A007598D6 /* Economy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Economy.swift; sourceTree = "<group>"; };
+		FB52EB811B012342007598D6 /* home160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home160.png; sourceTree = "<group>"; };
+		FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedPageViewController.swift; sourceTree = "<group>"; };
+		FB5F99631AE731DC00A4E2B8 /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticle.swift; path = ../NewsArticle.swift; sourceTree = "<group>"; };
+		FBD8F3111AFC1EE700F08BA1 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		FBF25D471ADF0E5400E23E56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +83,11 @@
 		FB043F991ADC822700D6946B = {
 			isa = PBXGroup;
 			children = (
+				FB52EB751B011AD6007598D6 /* MissouriNews.swift */,
+				FB52EB771B011AE2007598D6 /* ColumbiaNews.swift */,
+				FB52EB791B011B07007598D6 /* WorldNews.swift */,
+				FB52EB7B1B011B12007598D6 /* Sports.swift */,
+				FB52EB7D1B011B1A007598D6 /* Economy.swift */,
 				FB043FA41ADC822700D6946B /* MicroPay News */,
 				FB043FBA1ADC822700D6946B /* MicroPay NewsTests */,
 				FB043FA31ADC822700D6946B /* Products */,
@@ -77,9 +106,16 @@
 		FB043FA41ADC822700D6946B /* MicroPay News */ = {
 			isa = PBXGroup;
 			children = (
+				FB52EB811B012342007598D6 /* home160.png */,
+				FB30C95F1AFFB470003E353F /* NewsStories.swift */,
+				FB5F99631AE731DC00A4E2B8 /* NewsArticle.swift */,
+				FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */,
+				FBF25D471ADF0E5400E23E56 /* Main.storyboard */,
+				FBD8F3111AFC1EE700F08BA1 /* StoreViewController.swift */,
+				FB49180B1AE6C6E000E0CF6E /* HomePage.swift */,
+				FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */,
 				FB043FA71ADC822700D6946B /* AppDelegate.swift */,
-				FB043FA91ADC822700D6946B /* ViewController.swift */,
-				FB043FAB1ADC822700D6946B /* Main.storyboard */,
+				FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */,
 				FB043FAE1ADC822700D6946B /* Images.xcassets */,
 				FB043FB01ADC822700D6946B /* LaunchScreen.xib */,
 				FB043FA51ADC822700D6946B /* Supporting Files */,
@@ -192,9 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB043FAD1ADC822700D6946B /* Main.storyboard in Resources */,
+				FB52EB821B012342007598D6 /* home160.png in Resources */,
+				FBF25D481ADF0E5400E23E56 /* Main.storyboard in Resources */,
 				FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */,
 				FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */,
+				FB4918121AE6CB2200E0CF6E /* dollar-symbol1 (3).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB043FAA1ADC822700D6946B /* ViewController.swift in Sources */,
+				FB52EB601AFFC3AD007598D6 /* TopicsViewController.swift in Sources */,
+				FBD8F3121AFC1EE700F08BA1 /* StoreViewController.swift in Sources */,
 				FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */,
+				FB30C9601AFFB470003E353F /* NewsStories.swift in Sources */,
+				FB5F99641AE731DC00A4E2B8 /* NewsArticle.swift in Sources */,
+				FB52EB7C1B011B12007598D6 /* Sports.swift in Sources */,
+				FB52EB7E1B011B1A007598D6 /* Economy.swift in Sources */,
+				FB52EB761B011AD6007598D6 /* MissouriNews.swift in Sources */,
+				FB49180C1AE6C6E000E0CF6E /* HomePage.swift in Sources */,
+				FB52EB7A1B011B07007598D6 /* WorldNews.swift in Sources */,
+				FB5DC5071ADD8CE7000E16B6 /* PurchasedPageViewController.swift in Sources */,
+				FB52EB781B011AE2007598D6 /* ColumbiaNews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +284,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB043FAB1ADC822700D6946B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB043FAC1ADC822700D6946B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB043FB01ADC822700D6946B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -405,6 +445,7 @@
 				FB043FC31ADC822700D6946B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB043FC41ADC822700D6946B /* Build configuration list for PBXNativeTarget "MicroPay NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +454,7 @@
 				FB043FC61ADC822700D6946B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,10 +12,40 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
+    }
+    
+    private var topicData:NewsArticle = NewsArticle()
+    
+    func getTopicData() ->NewsArticle{
+        return topicData
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let app = UIApplication.sharedApplication()
+        
+        //setting UINavigationBar
+        var navigationBarAppearance = UINavigationBar.appearance()
+ 
+        //navigationBarAppearance changed. barTint changes top bar, tint color changes text color of buttons
+        navigationBarAppearance.barTintColor = UIColorFromHex(0x5EC8F8, alpha: 1)
+        navigationBarAppearance.tintColor = UIColor.whiteColor()
+
+        // change navigation item title color
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        
         return true
     }
 
@@ -24,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
+    
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
