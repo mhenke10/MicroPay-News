@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84EA42D41B02515B00A0A371 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA42D31B02515B00A0A371 /* ArticleViewController.swift */; };
 		FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB043FA71ADC822700D6946B /* AppDelegate.swift */; };
 		FB043FAF1ADC822700D6946B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB043FAE1ADC822700D6946B /* Images.xcassets */; };
 		FB043FB21ADC822700D6946B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB043FB01ADC822700D6946B /* LaunchScreen.xib */; };
@@ -15,6 +14,7 @@
 		FB30C9601AFFB470003E353F /* NewsStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30C95F1AFFB470003E353F /* NewsStories.swift */; };
 		FB49180C1AE6C6E000E0CF6E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49180B1AE6C6E000E0CF6E /* HomePage.swift */; };
 		FB4918121AE6CB2200E0CF6E /* dollar-symbol1 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */; };
+		FB52EB601AFFC3AD007598D6 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */; };
 		FB52EB761B011AD6007598D6 /* MissouriNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB751B011AD6007598D6 /* MissouriNews.swift */; };
 		FB52EB781B011AE2007598D6 /* ColumbiaNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB771B011AE2007598D6 /* ColumbiaNews.swift */; };
 		FB52EB7A1B011B07007598D6 /* WorldNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52EB791B011B07007598D6 /* WorldNews.swift */; };
@@ -38,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84EA42D31B02515B00A0A371 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		FB043FA21ADC822700D6946B /* MicroPay News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MicroPay News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB043FA61ADC822700D6946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB043FA71ADC822700D6946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		FB30C95F1AFFB470003E353F /* NewsStories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsStories.swift; sourceTree = "<group>"; };
 		FB49180B1AE6C6E000E0CF6E /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar-symbol1 (3).png"; sourceTree = "<group>"; };
+		FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		FB52EB751B011AD6007598D6 /* MissouriNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissouriNews.swift; sourceTree = "<group>"; };
 		FB52EB771B011AE2007598D6 /* ColumbiaNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumbiaNews.swift; sourceTree = "<group>"; };
 		FB52EB791B011B07007598D6 /* WorldNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldNews.swift; sourceTree = "<group>"; };
@@ -111,9 +111,9 @@
 				FB5F99631AE731DC00A4E2B8 /* NewsArticle.swift */,
 				FB4918111AE6CB2200E0CF6E /* dollar-symbol1 (3).png */,
 				FBF25D471ADF0E5400E23E56 /* Main.storyboard */,
-				84EA42D31B02515B00A0A371 /* ArticleViewController.swift */,
 				FBD8F3111AFC1EE700F08BA1 /* StoreViewController.swift */,
 				FB49180B1AE6C6E000E0CF6E /* HomePage.swift */,
+				FB52EB5F1AFFC3AD007598D6 /* TopicsViewController.swift */,
 				FB043FA71ADC822700D6946B /* AppDelegate.swift */,
 				FB5DC5061ADD8CE7000E16B6 /* PurchasedPageViewController.swift */,
 				FB043FAE1ADC822700D6946B /* Images.xcassets */,
@@ -250,8 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB52EB601AFFC3AD007598D6 /* TopicsViewController.swift in Sources */,
 				FBD8F3121AFC1EE700F08BA1 /* StoreViewController.swift in Sources */,
-				84EA42D41B02515B00A0A371 /* ArticleViewController.swift in Sources */,
 				FB043FA81ADC822700D6946B /* AppDelegate.swift in Sources */,
 				FB30C9601AFFB470003E353F /* NewsStories.swift in Sources */,
 				FB5F99641AE731DC00A4E2B8 /* NewsArticle.swift in Sources */,

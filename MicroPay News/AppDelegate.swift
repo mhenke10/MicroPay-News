@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MicroPay News
 //
-//  Created by Group 1.
+//  Created by Michael Henke on 4/13/15.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
