@@ -13,6 +13,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
+    
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
     var missouriStories: Array<NewsArticle> = []
@@ -62,6 +63,17 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         return cell
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! ArticleViewController
+        
+        destinationViewController.webArticles = article
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        article = missouriStories[indexPath.row]
+        performSegueWithIdentifier("webSegue", sender: self)
     }
     
 

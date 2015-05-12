@@ -51,16 +51,23 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return economyStories.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        article = economyStories[indexPath.row]
+        performSegueWithIdentifier("webSegue", sender: self)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        //this is the same setup as what was in the NYT News Reader app
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = economyStories[indexPath.row].headline
-        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! ArticleViewController
+        
+        destinationViewController.webArticles = article
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,15 +78,5 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func returnHome(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

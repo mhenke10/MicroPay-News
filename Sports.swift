@@ -70,6 +70,17 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        article = sportStories[indexPath.row]
+        performSegueWithIdentifier("webSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! ArticleViewController
+        
+        destinationViewController.webArticles = article
+    }
 
     @IBAction func returnHome(sender: AnyObject) {
         self.navigationController?.popToRootViewControllerAnimated(true)
@@ -78,16 +89,5 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
