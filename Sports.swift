@@ -2,7 +2,7 @@
 //  Sports.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 5/11/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -14,8 +14,8 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
-
+    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
+    
     var junkStories: Array<NewsArticle> = []
     var sportStories: Array<NewsArticle> = []
     
@@ -27,13 +27,14 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         self.title = "Sports"
         self.tokenCounter.text = (NewsArticle.counter).description
-
+        
+        
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
             if let errorString = errorStr {
                 println(errorString)
             } else {
-    
+                
                 let stories = self.newsStory.stories
                 
                 self.junkStories = stories.filter { $0.sectHed == "Sport"}
@@ -43,8 +44,6 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 self.junkStories = stories.filter { $0.sectHed == "Sports"}
                 
                 self.sportStories += self.junkStories
-
-                //println("No Error")
                 
                 self.sportsTable.reloadData()
             }
@@ -57,7 +56,6 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return sportStories.count
     }
     
@@ -66,10 +64,24 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         //this is the same setup as what was in the NYT News Reader app
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-
+        
         cell.textLabel?.text = sportStories[indexPath.row].headline
+        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        article = sportStories[indexPath.row]
+        performSegueWithIdentifier("webSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is ArticleViewController {
+            let destinationViewController = segue.destinationViewController as! ArticleViewController
+            
+            destinationViewController.webArticles = article
+        }
     }
 
     @IBAction func returnHome(sender: AnyObject) {
@@ -79,16 +91,5 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

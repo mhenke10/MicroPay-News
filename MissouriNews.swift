@@ -2,7 +2,7 @@
 //  MissouriNews.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 5/11/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -13,9 +13,8 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
-    var purchasedFilePath: String?
+    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
     
     var missouriStories: Array<NewsArticle> = []
     
@@ -37,39 +36,19 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
                 let stories = self.newsStory.stories
                 
                 self.missouriStories = stories.filter { $0.sectHed == "State News"}
-
-                //println("No Error")
+                
                 self.missouriNewsTable.reloadData()
             }
         }
         
     }
     
-    /*@IBAction func save(sender: AnyObject) {
-                let fileManager = NSFileManager.defaultManager()
-                var array: [String] = []
-                
-                if fileManager.fileExistsAtPath(purchasedFilePath!) {
-                    var purchasedFilePath = NSKeyedUnarchiver.unarchiveObjectWithFile(personFilePath!) as! [String]
-                    array += purchasedFilePath
-                }
-                
-                
-                let directoryPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-                let documentDir = directoryPaths[0] as! String
-                purchasedFilePath = documentDir.stringByAppendingPathComponent("purchased.archive")
-                var purchasedDataArray = array + ["id"]
-                NSKeyedArchiver.archiveRootObject(purchasedDataArray, toFile: purchasedFilePath!)
-    }*/
-    
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return missouriStories.count
     }
     
@@ -80,10 +59,23 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = missouriStories[indexPath.row].headline
-
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is ArticleViewController {
+            let destinationViewController = segue.destinationViewController as! ArticleViewController
+            
+            destinationViewController.webArticles = article
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        article = missouriStories[indexPath.row]
+        performSegueWithIdentifier("webSegue", sender: self)
     }
     
 
