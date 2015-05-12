@@ -2,7 +2,7 @@
 //  ArticleViewController.swift
 //  MicroPay News
 //
-//  Created by Admin on 5/12/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 

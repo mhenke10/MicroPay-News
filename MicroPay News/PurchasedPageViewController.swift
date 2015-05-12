@@ -2,7 +2,7 @@
 //  PurchasedPageViewController.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 4/14/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 

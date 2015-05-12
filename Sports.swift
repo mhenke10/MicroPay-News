@@ -2,7 +2,7 @@
 //  Sports.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 5/11/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -77,9 +77,11 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationViewController = segue.destinationViewController as! ArticleViewController
-        
-        destinationViewController.webArticles = article
+        if segue.destinationViewController is ArticleViewController {
+            let destinationViewController = segue.destinationViewController as! ArticleViewController
+            
+            destinationViewController.webArticles = article
+        }
     }
 
     @IBAction func returnHome(sender: AnyObject) {
