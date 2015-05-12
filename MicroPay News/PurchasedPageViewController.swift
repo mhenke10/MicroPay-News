@@ -11,54 +11,19 @@ import UIKit
 class PurchasedPageViewController: UIViewController//, UITableViewDataSource, UITableViewDelegate 
 {
     let cellIdentifier = "cell"
-
-    let sitePrefix = "http://www.columbiamissourian.com/a/"
-    
-    var article: NewsArticle?
-    var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
-    var purchasedStories: Array<NewsArticle> = []
+    let sitePrefix = "http://www.columbiamissourian.com/a/188667/"
     
     @IBOutlet weak var articleButton: UIBarButtonItem!
     
     @IBOutlet weak var tokenCounter: UILabel!
- 
-    var articleFilePath: String?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Articles"
-
-        let fileManager = NSFileManager.defaultManager()
-        let directoryPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let documentDir = directoryPaths[0] as! String
-        articleFilePath = documentDir.stringByAppendingPathComponent("purchased.archive")
-        
-        //loading parser
-        newsStory.load(newsSourceURL) {
-            (ns, errorStr) -> Void in
-            if let errorString = errorStr {
-                println(errorString)
-            } else {
-                //println("No Error")
-                //self.homePageTable.reloadData()
-            }
-        }
-        
-        if fileManager.fileExistsAtPath(articleFilePath!) {
-            let purchasedDataArray = NSKeyedUnarchiver.unarchiveObjectWithFile(articleFilePath!) as! [Int]
-            for story in newsStory.stories {
-                for purchases in purchasedDataArray {
-                    if purchases == story.id {
-                        purchasedStories.append(story)
-                    }
-                }
-            }
-        }
         
         self.tokenCounter.text = (NewsArticle.counter).description
         
         articleButton.enabled = false
+        // Do any additional setup after loading the view.
     }
 
     @IBAction func returnHome(sender: AnyObject) {

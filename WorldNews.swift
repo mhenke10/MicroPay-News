@@ -17,7 +17,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
     var worldStories: Array<NewsArticle> = []
-
+    
     @IBOutlet weak var worldNewsTable: UITableView!
     
     @IBOutlet weak var tokenCounter: UILabel!
@@ -26,7 +26,6 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         self.title = "World News"
         self.tokenCounter.text = (NewsArticle.counter).description
-
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
             if let errorString = errorStr {
@@ -36,8 +35,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 let stories = self.newsStory.stories
                 
                 self.worldStories = stories.filter { $0.sectHed == "News"}
-                //println("No Error")
-
+                
                 self.worldNewsTable.reloadData()
             }
         }
@@ -58,8 +56,10 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
         //this is the same setup as what was in the NYT News Reader app
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-
+        
         cell.textLabel?.text = worldStories[indexPath.row].headline
+        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
+        
         return cell
     }
 
