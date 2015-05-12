@@ -12,6 +12,8 @@ class ArticleViewController: UIViewController {
 
     var webArticles: NewsArticle?
     
+    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var webArticle: UIWebView!
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class ArticleViewController: UIViewController {
                 let loadRequest = NSMutableURLRequest(URL: load)
                 webArticle.loadRequest(loadRequest)
             }
+            
+            webArticle.scrollView.scrollEnabled = false 
         }
     }
 

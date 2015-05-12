@@ -14,7 +14,7 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
+    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
     
     var junkStories: Array<NewsArticle> = []
     var columbiaStories: Array<NewsArticle> = []

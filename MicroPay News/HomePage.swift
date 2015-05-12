@@ -15,7 +15,7 @@ class HomePage: UIViewController
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183802"
+    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
 
     //IBOutlets for counter and tableview
     @IBOutlet weak var tokenCounter: UILabel!
