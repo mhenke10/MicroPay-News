@@ -11,6 +11,7 @@ import UIKit
 class PurchasedPageViewController: UIViewController//, UITableViewDataSource, UITableViewDelegate 
 {
     let cellIdentifier = "cell"
+
     let sitePrefix = "http://www.columbiamissourian.com/a/"
     
     var article: NewsArticle?
@@ -21,13 +22,13 @@ class PurchasedPageViewController: UIViewController//, UITableViewDataSource, UI
     @IBOutlet weak var articleButton: UIBarButtonItem!
     
     @IBOutlet weak var tokenCounter: UILabel!
-    
+ 
     var articleFilePath: String?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Articles"
-        
+
         let fileManager = NSFileManager.defaultManager()
         let directoryPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDir = directoryPaths[0] as! String
@@ -58,7 +59,6 @@ class PurchasedPageViewController: UIViewController//, UITableViewDataSource, UI
         self.tokenCounter.text = (NewsArticle.counter).description
         
         articleButton.enabled = false
-
     }
 
     @IBAction func returnHome(sender: AnyObject) {

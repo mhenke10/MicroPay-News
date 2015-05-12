@@ -27,13 +27,14 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         super.viewDidLoad()
         self.title = "Columbia News"
         self.tokenCounter.text = (NewsArticle.counter).description
+
         
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
             if let errorString = errorStr {
                 println(errorString)
             } else {
-                
+      
                 let stories = self.newsStory.stories
                 
                 self.junkStories = stories.filter { $0.sectHed == "Local"}
@@ -53,6 +54,7 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
                 self.columbiaStories += self.junkStories
                 
                 self.columbiaNewsTable.reloadData()
+
             }
         }
         
@@ -74,7 +76,6 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = columbiaStories[indexPath.row].headline
-        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
 }

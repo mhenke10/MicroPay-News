@@ -14,6 +14,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
+    
     var purchasedFilePath: String?
     
     var missouriStories: Array<NewsArticle> = []
@@ -36,7 +37,8 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
                 let stories = self.newsStory.stories
                 
                 self.missouriStories = stories.filter { $0.sectHed == "State News"}
-                
+
+                //println("No Error")
                 self.missouriNewsTable.reloadData()
             }
         }
@@ -60,12 +62,14 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
                 NSKeyedArchiver.archiveRootObject(purchasedDataArray, toFile: purchasedFilePath!)
     }*/
     
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return missouriStories.count
     }
     
@@ -76,10 +80,10 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = missouriStories[indexPath.row].headline
+
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
-        
     }
     
 
