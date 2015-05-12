@@ -16,6 +16,8 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var newsStory: NewsStories = NewsStories()
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
+    var worldStories: Array<NewsArticle> = []
+    
     @IBOutlet weak var worldNewsTable: UITableView!
     
     @IBOutlet weak var tokenCounter: UILabel!
@@ -29,7 +31,11 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if let errorString = errorStr {
                 println(errorString)
             } else {
-                //println("No Error")
+                
+                let stories = self.newsStory.stories
+                
+                self.worldStories = stories.filter { $0.sectHed == "News"}
+                
                 self.worldNewsTable.reloadData()
             }
         }
@@ -42,7 +48,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsStory.stories.count
+        return worldStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,7 +57,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = newsStory.stories[indexPath.row].headline
+        cell.textLabel?.text = worldStories[indexPath.row].headline
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell

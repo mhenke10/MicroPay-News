@@ -11,6 +11,7 @@ import UIKit
 class PurchasedPageViewController: UIViewController//, UITableViewDataSource, UITableViewDelegate 
 {
     let cellIdentifier = "cell"
+    let sitePrefix = "http://www.columbiamissourian.com/a/188667/"
     
     @IBOutlet weak var articleButton: UIBarButtonItem!
     

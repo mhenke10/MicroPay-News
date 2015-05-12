@@ -25,19 +25,10 @@ class NewsArticle: NSObject{
     var sectHed: String = ""
     var id: Int = 0
     static var counter: Int = 10
-
-    var topics: [topicData]?
-    
-    let stateNews = topicData(topic: "State News")
-    let news = topicData(topic: "News")
-    let obituaries = topicData(topic: "Family Obituaries")
-    let local = topicData(topic: "Local News")
-    let sports = topicData(topic: "Sports")
-    
-    override init(){
-        topics = [stateNews, news, obituaries, local, sports]
-    }
     
 }
 
-
+class Purchased: NSObject{
+    var id: Int = 0
+    var purchase: Bool = false
+}

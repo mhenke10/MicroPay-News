@@ -16,6 +16,9 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var newsStory: NewsStories = NewsStories()
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
+    var junkStories: Array<NewsArticle> = []
+    var columbiaStories: Array<NewsArticle> = []
+    
     @IBOutlet weak var columbiaNewsTable: UITableView!
     
     @IBOutlet weak var tokenCounter: UILabel!
@@ -29,13 +32,26 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
             if let errorString = errorStr {
                 println(errorString)
             } else {
+                
                 let stories = self.newsStory.stories
-                for story in stories{
-                    if(story.sectHed == "Local" || story.sectHed == "Local-News"){
-                        println("Print: " + story.sectHed)
-                        self.columbiaNewsTable.reloadData()
-                    }
-                }
+                
+                self.junkStories = stories.filter { $0.sectHed == "Local"}
+                
+                self.columbiaStories += self.junkStories
+                
+                self.junkStories = stories.filter { $0.sectHed == "Family Obituaries"}
+                
+                self.columbiaStories += self.junkStories
+                
+                self.junkStories = stories.filter { $0.sectHed == "Higher Education"}
+                
+                self.columbiaStories += self.junkStories
+                
+                self.junkStories = stories.filter { $0.sectHed == "Opinion"}
+                
+                self.columbiaStories += self.junkStories
+                
+                self.columbiaNewsTable.reloadData()
             }
         }
         
@@ -47,7 +63,7 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsStory.stories.count
+        return columbiaStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,7 +72,7 @@ class ColumbiaNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = newsStory.stories[indexPath.row].headline
+        cell.textLabel?.text = columbiaStories[indexPath.row].headline
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell

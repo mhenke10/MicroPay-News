@@ -16,6 +16,8 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var newsStory: NewsStories = NewsStories()
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
+    var economyStories: Array<NewsArticle> = []
+    
     @IBOutlet weak var economyTable: UITableView!
     
     @IBOutlet weak var tokenCounter: UILabel!
@@ -25,26 +27,18 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tokenCounter.text = (NewsArticle.counter).description
         
         newsStory.load(newsSourceURL) {
+            
             (ns, errorStr) -> Void in
             if let errorString = errorStr {
                 println(errorString)
             } else {
-                //println("No Error")
+                
                 let stories = self.newsStory.stories
-                for story in stories{
-                let economyStories = stories.filter(){
-                        let sectHed = ($0.sectHed as String?)
-                            if sectHed == "Economy"{
-                                print(sectHed!)
-                                print("\n")
-                                return true
-                            } else {
-                                return false
-                            }
-                    }
-                }
-                self.economyTable.reloadData()
+                
+                self.economyStories = stories.filter { $0.sectHed == "Economy"}
+            
             }
+                self.economyTable.reloadData()
         }
     }
 
@@ -54,7 +48,7 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsStory.stories.count
+        return economyStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -63,7 +57,7 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = newsStory.stories[indexPath.row].headline
+        cell.textLabel?.text = economyStories[indexPath.row].headline
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell

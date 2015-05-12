@@ -15,6 +15,8 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var newsStory: NewsStories = NewsStories()
     var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
+    var missouriStories: Array<NewsArticle> = []
+    
     @IBOutlet weak var missouriNewsTable: UITableView!
     
     @IBOutlet weak var tokenCounter: UILabel!
@@ -29,7 +31,11 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
             if let errorString = errorStr {
                 println(errorString)
             } else {
-                //println("No Error")
+                
+                let stories = self.newsStory.stories
+                
+                self.missouriStories = stories.filter { $0.sectHed == "State News"}
+                
                 self.missouriNewsTable.reloadData()
             }
         }
@@ -42,7 +48,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsStory.stories.count
+        return missouriStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,7 +57,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = newsStory.stories[indexPath.row].headline
+        cell.textLabel?.text = missouriStories[indexPath.row].headline
         //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
