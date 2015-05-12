@@ -55,7 +55,7 @@ class StoreViewController: UIViewController {
     
     
     @IBAction func twentyTokens(sender: AnyObject) {
-        var alert = UIAlertController(title: "Do you want to purchase 10 Tokens?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: "Do you want to purchase 20 Tokens?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes!", style:UIAlertActionStyle.Default, handler:{(alert: UIAlertAction!) in NewsArticle.counter = NewsArticle.counter + 20
             
@@ -63,19 +63,20 @@ class StoreViewController: UIViewController {
         
         self.presentViewController(alert, animated: true, completion: nil)
         
-        tokenCounter.text = (NewsArticle.counter+20).description
+        //tokenCounter.text = (NewsArticle.counter+20).description
         
     }
     
     
     @IBAction func thirtyTokens(sender: AnyObject) {
-        var alert = UIAlertController(title: "Do you want to purchase 10 Tokens?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: "Do you want to purchase 30 Tokens?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes!", style:UIAlertActionStyle.Default, handler:{(alert: UIAlertAction!) in NewsArticle.counter = NewsArticle.counter + 30
             
             self.tokenCounter.text = (NewsArticle.counter).description}))
         
         self.presentViewController(alert, animated: true, completion: nil)
+        
         
         //self.tokenCounter.text = (NewsArticle.counter).description
         
