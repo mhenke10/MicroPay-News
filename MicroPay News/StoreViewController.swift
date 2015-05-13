@@ -2,7 +2,7 @@
 //  StoreViewController.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 5/7/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 

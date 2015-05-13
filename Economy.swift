@@ -2,7 +2,7 @@
 //  Economy.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 5/11/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -24,7 +24,6 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Economy"
-        self.tokenCounter.text = (NewsArticle.counter).description
         
         newsStory.load(newsSourceURL) {
             
@@ -46,6 +45,9 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tokenCounter.text = (NewsArticle.counter).description
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return economyStories.count
@@ -54,6 +56,7 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         article = economyStories[indexPath.row]
         performSegueWithIdentifier("webSegue", sender: self)
+        economyTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -65,9 +68,11 @@ class Economy: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationViewController = segue.destinationViewController as! ArticleViewController
-        
-        destinationViewController.webArticles = article
+        if segue.destinationViewController is ArticleViewController {
+            let destinationViewController = segue.destinationViewController as! ArticleViewController
+            
+            destinationViewController.webArticles = article
+        }
     }
     
     override func didReceiveMemoryWarning() {

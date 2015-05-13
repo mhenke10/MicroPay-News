@@ -2,7 +2,7 @@
 //  HomePage.swift
 //  MicroPay News
 //
-//  Created by Michael Henke on 4/21/15.
+//  Created by Group 1.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class HomePage: UIViewController
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183802"
+    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
 
     //IBOutlets for counter and tableview
     @IBOutlet weak var tokenCounter: UILabel!
@@ -29,6 +29,20 @@ class HomePage: UIViewController
         
         //changes what the 'Back' Button would be when changing view controllers
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: UIBarButtonItemStyle.Done, target: nil, action: nil)
+        
+        let fileManager = NSFileManager.defaultManager()
+        let directoryPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDir = directoryPaths[0] as! String
+        var tokensFilePath = documentDir.stringByAppendingPathComponent("tokens.archive")
+        
+        if fileManager.fileExistsAtPath(tokensFilePath) {
+            let tokenArray = NSKeyedUnarchiver.unarchiveObjectWithFile(tokensFilePath) as! [Int]
+            for value in tokenArray {
+                NewsArticle.counter = value
+            }
+        } else {
+            NewsArticle.counter = 10
+        }
     
     }
     
