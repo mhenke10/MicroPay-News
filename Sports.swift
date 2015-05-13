@@ -2,7 +2,7 @@
 //  Sports.swift
 //  MicroPay News
 //
-//  Created by Group 1.
+//  Created by Michael Henke on 5/11/15.
 //  Copyright (c) 2015 Group 1. All rights reserved.
 //
 
@@ -26,6 +26,8 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sports"
+        self.tokenCounter.text = (NewsArticle.counter).description
+        
         
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
@@ -52,19 +54,19 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.tokenCounter.text = (NewsArticle.counter).description
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sportStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
+        
+        //this is the same setup as what was in the NYT News Reader app
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = sportStories[indexPath.row].headline
+        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
     }
@@ -72,15 +74,12 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         article = sportStories[indexPath.row]
         performSegueWithIdentifier("webSegue", sender: self)
-        sportsTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.destinationViewController is ArticleViewController {
-            let destinationViewController = segue.destinationViewController as! ArticleViewController
-            
-            destinationViewController.webArticles = article
-        }
+        let destinationViewController = segue.destinationViewController as! ArticleViewController
+        
+        destinationViewController.webArticles = article
     }
 
     @IBAction func returnHome(sender: AnyObject) {

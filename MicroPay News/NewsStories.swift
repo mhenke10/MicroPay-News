@@ -2,7 +2,7 @@
 //  NewsStories.swift
 //  Missourian
 //
-//  Created by Group 1.
+//  Created by Dale Musser on 5/7/15.
 //  Copyright (c) 2015 Dale Musser. All rights reserved.
 //
 
