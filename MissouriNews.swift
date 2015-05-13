@@ -14,7 +14,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
     
-    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
+    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
     var missouriStories: Array<NewsArticle> = []
     
@@ -25,7 +25,6 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Missouri News"
-        self.tokenCounter.text = (NewsArticle.counter).description
         
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
@@ -47,6 +46,9 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
         return 1
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tokenCounter.text = (NewsArticle.counter).description
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return missouriStories.count
@@ -76,6 +78,7 @@ class MissouriNews: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         article = missouriStories[indexPath.row]
         performSegueWithIdentifier("webSegue", sender: self)
+        missouriNewsTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
 

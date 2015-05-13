@@ -14,7 +14,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
+    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
     var worldStories: Array<NewsArticle> = []
     
@@ -25,7 +25,8 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "World News"
-        self.tokenCounter.text = (NewsArticle.counter).description
+        
+        
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
             if let errorString = errorStr {
@@ -46,6 +47,9 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tokenCounter.text = (NewsArticle.counter).description
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return worldStories.count
@@ -74,6 +78,7 @@ class WorldNews: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         article = worldStories[indexPath.row]
         performSegueWithIdentifier("webSegue", sender: self)
+        worldNewsTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     override func didReceiveMemoryWarning() {

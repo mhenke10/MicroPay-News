@@ -14,7 +14,7 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var cellIden = "cell"
     var article: NewsArticle?
     var newsStory: NewsStories = NewsStories()
-    var newsSourceURL = "http://dalemusser.com/missourian/data.json"
+    var newsSourceURL = "http://ec2-52-11-214-35.us-west-2.compute.amazonaws.com:5050/data?ids=183762,183900"
     
     var junkStories: Array<NewsArticle> = []
     var sportStories: Array<NewsArticle> = []
@@ -26,8 +26,6 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sports"
-        self.tokenCounter.text = (NewsArticle.counter).description
-        
         
         newsStory.load(newsSourceURL) {
             (ns, errorStr) -> Void in
@@ -54,19 +52,19 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tokenCounter.text = (NewsArticle.counter).description
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sportStories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        //this is the same setup as what was in the NYT News Reader app
-        
+
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = sportStories[indexPath.row].headline
-        //cell.detailTextLabel?.text = newsStory.stories[indexPath.row].sectHed
         
         return cell
     }
@@ -74,6 +72,7 @@ class Sports: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         article = sportStories[indexPath.row]
         performSegueWithIdentifier("webSegue", sender: self)
+        sportsTable.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
